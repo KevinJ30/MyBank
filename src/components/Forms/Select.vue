@@ -4,7 +4,7 @@
     <select v-bind:name="name" class="form-control">
       <option :value="option.key" v-for="option in options" :key="option.key">{{ option.value }}</option>
     </select>
-    <FormFeedbackComponent />
+    <FormFeedbackComponent v-bind:type="feedback.type" v-bind:message="feedback.message" />
   </div>
 </template>
 
@@ -18,7 +18,8 @@ export default {
     },
     props: {
       name: String,
-      options: Array
+      options: Array,
+      feedback: Object
     }
 }
 </script>

@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <InputComponent name="username" placeholder="Nom d'utilisateur"
-                    v-bind:information="error" />
-    <SelectComponent name="list" v-bind:options="options" />
+    <InputComponent name="username" placeholder="Nom d'utilisateur" v-bind:feedback="errorInput" />
+    <SelectComponent name="list" v-bind:options="options" v-bind:feedback="errorSelect"/>
+    <input type="submit" class=" btn btn-primaary">
   </div>
 </template>
 
@@ -19,9 +19,13 @@ export default {
 
   data: () => {
     return {
-      error: {
+      errorInput: {
         type: 'error',
         message: 'Impossible de charger les données de l\'application'
+      },
+      errorSelect: {
+        type: 'success',
+        message: 'Les données saisie sont correct...'
       },
 
       options: [
