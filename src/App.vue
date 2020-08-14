@@ -1,28 +1,47 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <InputComponent name="username" placeholder="Nom d'utilisateur"
+                    v-bind:information="error" />
+    <SelectComponent name="list" v-bind:options="options" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import InputComponent from './components/Forms/Input.vue';
+import SelectComponent from './components/Forms/Select.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    InputComponent,
+    SelectComponent
+  },
+
+  data: () => {
+    return {
+      error: {
+        type: 'error',
+        message: 'Impossible de charger les données de l\'application'
+      },
+
+      options: [
+        {
+          key: '1',
+          value: 'option 1'
+        },
+
+        {
+          key: '2',
+          value: 'option 2'
+        }
+      ]
+    }
   }
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  font-family: Helvetica, sans-serif;
 }
 </style>
