@@ -1,0 +1,15 @@
+$card_backColor: #fff;
+$card_fontColor: #1D2D4B;
+$card_borderRadius: 5px;
+
+$card_padding: 32px;
+$card_border: 1px solid #D0D9E8;
+
+.card {
+  padding:$card_padding;
+  background-color:$card_backColor;
+  color:$card_fontColor;
+  border:$card_border;
+  border-radius:$card_borderRadius;
+  box-shadow: 2px 2px 15px rgba(209, 213, 227, 0.3);
+}
