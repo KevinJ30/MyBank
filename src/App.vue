@@ -2,10 +2,18 @@
   <div class="container">
     <div id="app">
       <div class="page-auth">
-        <div class="card">
-          <InputComponent name="username" placeholder="Nom d'utilisateur" v-bind:feedback="errorInput" />
-          <SelectComponent name="list" v-bind:options="options" v-bind:feedback="errorSelect"/>
-          <input type="submit" class=" btn btn-primaary">
+        <div class="wrapper">
+          <div class="container-logo">
+            <img class="logo" src="http://lorempixel.com/215/215" alt="logo">
+          </div>
+          <div class="card">
+            <h1>Authentification</h1>
+            <InputComponent name="username" placeholder="Nom d'utilisateur" v-bind:feedback="errorInput" />
+            <SelectComponent name="list" v-bind:options="options" v-bind:feedback="errorSelect"/>
+            <input type="submit" class=" btn btn-primaary">
+            <a href="#">Vous avez oublier votre mot de passe ?</a>
+            <a href="#">Vous n'avez pas encore de compte ?</a>
+          </div>
         </div>
       </div>
     </div>
