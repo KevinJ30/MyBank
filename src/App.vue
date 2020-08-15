@@ -4,12 +4,12 @@
       <div class="page-auth">
         <div class="wrapper">
           <div class="container-logo">
-            <img class="logo" src="http://lorempixel.com/215/215" alt="logo">
+            <img class="logo" src="img/logo.svg" alt="logo">
           </div>
           <div class="card">
             <h1>Authentification</h1>
             <InputComponent name="username" placeholder="Nom d'utilisateur" v-bind:feedback="errorInput" />
-            <SelectComponent name="list" v-bind:options="options" v-bind:feedback="errorSelect"/>
+            <SelectComponent name="list" v-bind:options="options" v-bind:feedback="errorSelect" placeholder="Sélectionner une option..."/>
             <input type="submit" class=" btn btn-primaary">
             <a href="#">Vous avez oublier votre mot de passe ?</a>
             <a href="#">Vous n'avez pas encore de compte ?</a>
@@ -45,12 +45,14 @@ export default {
       options: [
         {
           key: '1',
-          value: 'option 1'
+          value: 'option 1',
+          selected: false
         },
 
         {
           key: '2',
-          value: 'option 2'
+          value: 'option 2',
+          selected: false
         }
       ]
     }

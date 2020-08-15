@@ -3,6 +3,25 @@
   padding:8px 0;
 }
 
+select.form-control {
+  background-color:transparent;
+}
+
+/* with the :focus here, we show grey when using the element */
+select.form-control {
+  color:#1D2D4B;
+}
+
+.form-control::placeholder {
+  color: #a7acb7;
+}
+
+.form-control {
+  color:#1D2D4B;
+  border:1px solid #A1ACBE;
+  border-radius:3px;
+}
+
 .form__input-feedback {
   margin: 0;
   font-size: .7em;

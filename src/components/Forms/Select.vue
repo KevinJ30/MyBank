@@ -2,7 +2,8 @@
   <div class="form-group">
     <label v-bind:for="name">{{ name }}</label>
     <select v-bind:name="name" class="form-control">
-      <option :value="option.key" v-for="option in options" :key="option.key">{{ option.value }}</option>
+      <option class="select-title" value="">{{ placeholder }}</option>
+      <option :value="option.key" v-for="option in options" :key="option.key" v-bind:selected="option.selected">{{ option.value }}</option>
     </select>
     <FormFeedbackComponent v-bind:type="feedback.type" v-bind:message="feedback.message" />
   </div>
@@ -19,6 +20,7 @@ export default {
     props: {
       name: String,
       options: Array,
+      placeholder: String,
       feedback: Object
     }
 }
