@@ -22,7 +22,12 @@ Vue.use(VueRouter)
     path: '/login',
     name: 'Login',
     component: () => import ('../views/Auth.vue')
-  }
+  },
+    {
+      path: '/comptes',
+      name: 'Comptes',
+      component: () => import('../views/Account.vue')
+    }
 ]
 
 const router = new VueRouter({
@@ -30,5 +35,20 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes
 })
+
+router.beforeEach((to, from, next) => {
+  console.log(to, from, next);
+
+  // Si on tombe sur la page login
+  // On authorize l'accès
+  /**if(to.path === '/login') {
+    next();
+  }**/
+
+  // si l'utilisateur est connecté
+    // affichage de la page à l'utilisateur
+  // sinon on refuse l'accès a toutes les page sauf celles du login
+  next();
+});
 
 export default router
