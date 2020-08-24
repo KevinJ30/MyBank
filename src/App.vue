@@ -1,67 +1,34 @@
 <template>
-  <div class="container">
-    <div id="app">
-      <div class="page-auth">
-        <div class="wrapper">
-          <div class="container-logo">
-            <img class="logo" src="img/logo.svg" alt="logo">
-          </div>
-          <div class="card">
-            <h1>Authentification</h1>
-            <InputComponent name="username" placeholder="Nom d'utilisateur" v-bind:feedback="errorInput" />
-            <SelectComponent name="list" v-bind:options="options" v-bind:feedback="errorSelect" placeholder="Sélectionner une option..."/>
-            <input type="submit" class=" btn btn-primaary">
-            <a href="#">Vous avez oublier votre mot de passe ?</a>
-            <a href="#">Vous n'avez pas encore de compte ?</a>
-          </div>
-        </div>
-      </div>
+  <div id="app">
+    <div id="nav">
+      <router-link to="/login">Connection</router-link> |
+
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link>
     </div>
+    <router-view/>
   </div>
 </template>
 
-<script>
-import InputComponent from './components/Forms/Input.vue';
-import SelectComponent from './components/Forms/Select.vue';
+<style lang="scss">
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
 
-export default {
-  name: 'App',
-  components: {
-    InputComponent,
-    SelectComponent
-  },
+#nav {
+  padding: 30px;
 
-  data: () => {
-    return {
-      errorInput: {
-        type: 'error',
-        message: 'Impossible de charger les données de l\'application'
-      },
-      errorSelect: {
-        type: 'success',
-        message: 'Les données saisie sont correct...'
-      },
+  a {
+    font-weight: bold;
+    color: #2c3e50;
 
-      options: [
-        {
-          key: '1',
-          value: 'option 1',
-          selected: false
-        },
-
-        {
-          key: '2',
-          value: 'option 2',
-          selected: false
-        }
-      ]
+    &.router-link-exact-active {
+      color: #42b983;
     }
   }
-}
-</script>
-
-<style>
-#app {
-  font-family: Helvetica, sans-serif;
 }
 </style>
