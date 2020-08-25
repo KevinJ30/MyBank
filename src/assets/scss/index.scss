@@ -6,6 +6,7 @@
 
 // Components
 @import "components/card";
+@import "components/card-soldes";
 
 @import "grid";
 
@@ -40,3 +41,4 @@ body {
  * Partials
  **/
 @import "partials/authentification";
+@import "partials/account";

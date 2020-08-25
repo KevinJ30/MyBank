@@ -1,7 +1,7 @@
 <template>
   <div class="form-group">
     <label v-bind:for="name">{{ name }}</label>
-    <input type="text" class="form-control" v-bind:name="name" v-bind:placeholder="placeholder"/>
+    <input v-bind:type="type ? type : 'text'" class="form-control" v-bind:name="name" v-bind:placeholder="placeholder"/>
     <FormFeedbackComponent v-bind:type="feedback.type" v-bind:message="feedback.message" />
   </div>
 </template>
@@ -14,7 +14,8 @@ export default {
   props: {
     name: String,
     placeholder: String,
-    feedback: Object
+    feedback: Object,
+    type: String
   },
 
   components: {

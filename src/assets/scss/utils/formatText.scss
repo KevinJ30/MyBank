@@ -5,3 +5,13 @@ span.error {
 span.success {
   color: #44B764;
 }
+
+span.price_positive {
+  color:#44B764;
+  font-weight:600;
+}
+
+span.price_negative {
+  color:#B74444;
+  font-weight:600;
+}

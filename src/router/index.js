@@ -26,7 +26,7 @@ Vue.use(VueRouter)
     {
       path: '/comptes',
       name: 'Comptes',
-      component: () => import('../views/Account.vue')
+      component: () => import('../views/Account/Account.vue')
     }
 ]
 

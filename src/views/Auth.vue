@@ -8,7 +8,7 @@
 
               <form action="#">
                 <InputComponent name="username" placeholder="Nom d'utilisateur" v-bind:feedback="error" />
-                <InputComponent name="password" placeholder="Mot de passe" v-bind:feedback="error" />
+                <InputComponent type="password" name="password" placeholder="Mot de passe" v-bind:feedback="error" />
                 <button type="submit" class="btn btn-primary">Se connecter</button>
               </form>
             </div>
