@@ -9,7 +9,7 @@
       </div>
 
       <div class="card-account_actions">
-        <a href="#" class="card-account_btn">Accéder</a>
+        <router-link to="/compte" class="nav-link">Accèder</router-link>
       </div>
     </div>
   </div>

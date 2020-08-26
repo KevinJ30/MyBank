@@ -1,0 +1,32 @@
+table{
+  margin-left:-32px;
+  table-layout: auto;
+  width:calc(100% + (32px * 2));
+  border-spacing:0;
+  white-space: nowrap;
+}
+
+tr th {
+  padding:16px 8px;
+  background:#446BB7;
+  color:#fff;
+  font-weight:300;
+  font-size:0.8em;
+  text-align:left;
+  border-collapse: collapse;
+}
+
+tr td {
+  padding:8px;
+  border-bottom:1px solid #D0D9E8;
+  border-left:none;
+  border-right:none;
+  max-width:100%;
+  white-space:nowrap;
+}
+
+tr td.cells-auto {
+  width:1px;
+  white-space: nowrap;
+  text-align:center;
+}

@@ -2,11 +2,12 @@
 @import "utils/formatText";
 @import "utils/forms";
 @import "utils/btn";
-
+@import "utils/table";
 
 // Components
 @import "components/card";
 @import "components/card-soldes";
+@import "components/navbar";
 
 @import "grid";
 
@@ -16,6 +17,7 @@
 
 html, body {
   font-size:16px;
+  font-family: sans-serif;
 }
 
 body {
@@ -42,3 +44,16 @@ body {
  **/
 @import "partials/authentification";
 @import "partials/account";
+
+/**
+ * transiton page
+ **/
+.fade-enter-active, .fade-leave-active {
+  transform: translateX(0);
+  transition: opacity .3s ease-in-out, transform .3s ease-in-out;
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+  transform: translateX(150px);
+}

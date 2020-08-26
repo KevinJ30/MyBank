@@ -1,0 +1,28 @@
+$topbar_primary_color: #446BB7;
+$topbar_ligth_color: #F8F9FD;
+$topbar_hover_color: #e3e4e9;
+
+#nav {
+    position: fixed;
+    width:100%;
+    padding:0 16px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height:55px;
+    background-color:$topbar_primary_color;
+}
+
+#nav .nav-link {
+  color:$topbar_ligth_color;
+}
+
+#nav a {
+  text-decoration:none;
+  font-weight: 600;
+  transition:color .3s;
+
+  &:hover {
+    color:$topbar_hover_color;
+  }
+}

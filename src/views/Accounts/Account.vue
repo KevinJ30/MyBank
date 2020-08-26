@@ -7,7 +7,7 @@
 </template>
 
 <script>
-  import CardAccountComponent from '@/views/Account/Components/CardAccount';
+  import CardAccountComponent from '@/views/Accounts/Components/CardAccount';
   import SoldesComponent from '@/components/elements/Soldes';
 
   export default {
@@ -17,22 +17,13 @@
       SoldesComponent
     },
 
+    mounted() {
+      this.accounts = this.$attrs.accountStores.states.accounts;
+    },
+
     data: () => {
       return {
-          accounts: [
-            {
-              id: 0,
-              name: 'Compte principale Postal',
-              number_account: '11 137 84 F030',
-              solde: 1500
-            },
-            {
-              id: 1,
-              name: 'Livret A Postale',
-              number_account: '11 137 84 F030 A',
-              solde: 100
-            }
-          ]
+          accounts: []
       }
     }
   }
